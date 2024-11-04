@@ -131,7 +131,7 @@
   }
 
   .explore-search {
-    @apply h-12 bg-dark-4 border-none placeholder:text-light-4 focus-visible:ring-0 focus-visible:ring-offset-0 ring-offset-0 !important;
+    @apply h-12 bg-dark-3 border-none placeholder:text-light-4 focus-visible:ring-0 focus-visible:ring-offset-0 ring-offset-0 !important;
   }
 
   /* Home */
@@ -267,11 +267,11 @@
 
   /* Button */
   .shad-button_primary {
-    @apply bg-primary-500 hover:bg-primary-500  flex gap-2 !important;
+    @apply h-12 bg-dark-4  hover:bg-dark-3  flex gap-2 !important;
   }
 
   .shad-button_dark_4 {
-    @apply h-12 bg-dark-4 px-5  flex gap-2 !important;
+    @apply h-12 bg-dark-4 px-5  hover:bg-dark-3 flex gap-2 !important;
   }
 
   .shad-button_ghost {
