@@ -271,7 +271,7 @@
   }
 
   .shad-button_dark_4 {
-    @apply h-12 bg-dark-4 px-5  hover:bg-dark-3 flex gap-2 !important;
+    @apply h-12 bg-dark-4 px-5  hover:bg-dark-2 flex gap-2 !important;
   }
 
   .shad-button_ghost {
@@ -298,5 +298,6 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 } */
+
 
 }
