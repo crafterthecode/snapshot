@@ -292,12 +292,16 @@
   color: #fbfcfe; /* Default text color */
   /* transition: color 0.3s ease; Smooth transition effect */
 }
-.file_uploader-box button {
-  color: white;
+
+.user-grid .flex-1 .shad-button_primary,
+.home-creators .shad-button_primary,
+.items-center.justify-end .shad-button_primary,
+.file_uploader-box  .shad-button_dark_4,
+.common-container .shad-button_dark_4,
+.false .shad-button_primary {
+ color: white;
 }
-.leftsidebar shad-button_ghost{
-  color: black;
-}
+
 
 
 /* .group:hover invert-white {
