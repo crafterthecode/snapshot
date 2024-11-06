@@ -223,7 +223,7 @@
   }
 
   .leftsidebar-link {
-    @apply rounded-lg base-medium hover:bg-primary-500 transition;
+    @apply rounded-lg base-medium hover:bg-primary-500 transition hover:text-white;
   }
 
   /* Post Card */
@@ -286,14 +286,18 @@
 .shad-button_ghost:hover {
     /* background-color: transparent !important; */
     --tw-text-opacity: 1 !important;
-    color: #09090a !important;
+    /* color: #09090a !important; */
 }
 .hover-text {
   color: #fbfcfe; /* Default text color */
   /* transition: color 0.3s ease; Smooth transition effect */
 }
-
-
+.file_uploader-box button {
+  color: white;
+}
+.leftsidebar shad-button_ghost{
+  color: black;
+}
 
 
 /* .group:hover invert-white {
