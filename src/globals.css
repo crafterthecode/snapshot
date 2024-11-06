@@ -293,14 +293,14 @@
   /* transition: color 0.3s ease; Smooth transition effect */
 }
 
-.user-grid .flex-1 .shad-button_primary,
-.home-creators .shad-button_primary,
-.items-center.justify-end .shad-button_primary,
-.file_uploader-box  .shad-button_dark_4,
-.common-container .shad-button_dark_4,
-.false .shad-button_primary {
+
+.items-center.justify-end .shad-button_dark_4,
+.file_uploader-box  .shad-button_dark_4,  
+.shad-button_primary,
+.rounded-lg .flex.whitespace-nowrap.small-medium {
  color: white;
 }
+
 
 
 
