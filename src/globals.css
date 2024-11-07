@@ -288,6 +288,9 @@
     --tw-text-opacity: 1 !important;
     /* color: #09090a !important; */
 }
+
+
+
 .hover-text {
   color: #fbfcfe; /* Default text color */
   /* transition: color 0.3s ease; Smooth transition effect */
