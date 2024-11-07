@@ -101,11 +101,11 @@ const Profile = () => {
       </div>
 
       {currentUser.$id === user.id && (
-        <div className="flex max-w-5xl w-full">
+        <div className="flex max-w-5xl w-full ">
           <Link
             to={`/profile/${id}`}
             className={`profile-tab rounded-l-lg ${
-              pathname === `/profile/${id}` && "!bg-dark-4"
+              pathname === `/profile/${id}` 
             }`}>
             <img
               src={"/assets/icons/posts.svg"}
@@ -119,13 +119,15 @@ const Profile = () => {
           <Link
             to={`/profile/${id}/liked-posts`}
             className={`profile-tab rounded-r-lg ${
-              pathname === `/profile/${id}/liked-posts` && "!bg-dark-4"
+              pathname === `/profile/${id}/liked-posts` 
             }`}>
             <img
               src={"/assets/icons/like.svg"}
               alt="like"
               width={20}
               height={20}
+              className=""
+
             />
             Liked Posts
           </Link>

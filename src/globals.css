@@ -300,8 +300,16 @@
 .rounded-lg .flex.whitespace-nowrap.small-medium {
  color: white;
 }
-
-
+.profile-tab:focus,
+.profile-tab:active{
+ color: white;
+ background-color: #6a5bc2;
+}
+.profile-container .profile-tab.rounded-l-lg.true{
+ background-color: #6a5bc2;
+ color: white;
+ 
+}
 
 
 /* .group:hover invert-white {
