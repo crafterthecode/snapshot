@@ -94,7 +94,7 @@ const LeftSidebar = () => {
           alt="logout"
           className={`group-hover:invert-white ${over ? "invert-white" : ""}`}
         />
-        <p className="small-medium lg:base-medium">Logout1</p>
+        <p className="small-medium lg:base-medium">Logout</p>
       </Button>
     </nav>
   );
