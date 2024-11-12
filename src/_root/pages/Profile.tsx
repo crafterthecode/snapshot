@@ -83,7 +83,7 @@ const Profile = () => {
                   alt="edit"
                   width={20}
                   height={20}
-                  className="invert-white"
+                  className="invert-white "
                   
                 />
                 <p className="flex whitespace-nowrap small-medium">
@@ -112,7 +112,8 @@ const Profile = () => {
               alt="posts"
               width={20}
               height={20}
-              className=""
+              className={`group-hover:invert-white ${pathname === `/profile/${id}` ? "invert-white" : ""}`}
+
             />
             Posts
           </Link>
@@ -126,7 +127,7 @@ const Profile = () => {
               alt="like"
               width={20}
               height={20}
-              className=""
+              className={`group-hover:invert-white ${pathname === `/profile/${id}/liked-posts` ? "invert-white" : ""}`} 
 
             />
             Liked Posts

@@ -11,12 +11,13 @@ import {
 } from "@/lib/react-query/queries";
 import { multiFormatDateString } from "@/lib/utils";
 import { useUserContext } from "@/context/AuthContext";
+import { useState } from "react";
 
 const PostDetails = () => {
   const navigate = useNavigate();
   const { id } = useParams();
   const { user } = useUserContext();
-
+  let [over, setOver] = useState(false);
   const { data: post, isLoading } = useGetPostById(id);
   const { data: userPosts, isLoading: isUserPostLoading } = useGetUserPosts(
     post?.creator.$id
@@ -35,18 +36,23 @@ const PostDetails = () => {
   return (
     <div className="post_details-container ">
       <div className="hidden md:flex max-w-5xl w-full">
-        <Button
-          onClick={() => navigate(-1)}
-          variant="ghost"
-          className="shad-button_ghost">
-          <img
-            src={"/assets/icons/back.svg"}
-            alt="back"
-            width={24}
-            height={24}
-          />
-          <p className="small-medium lg:base-medium">Back</p>
-        </Button>
+      <Button
+  onClick={() => navigate(-1)}
+  onMouseOver={() => setOver(true)}
+  onMouseOut={() => setOver(false)}
+  variant="ghost"
+  className="shad-button_ghost"
+>
+  <img
+    src="/assets/icons/back.svg"
+    alt="back"
+    width={24}
+    height={24}
+    className={`group-hover:invert-white ${over ? "invert-white" : ""}`}
+  />
+  <p className="small-medium lg:base-medium">Back</p>
+</Button>
+
       </div>
 
       {isLoading || !post ? (

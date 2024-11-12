@@ -6,12 +6,13 @@ import { Loader } from "@/components/shared";
 import { Button } from "@/components/ui/button";
 import { useSignOutAccount } from "@/lib/react-query/queries";
 import { useUserContext, INITIAL_USER } from "@/context/AuthContext";
+import { useState } from "react";
 
 const LeftSidebar = () => {
   const navigate = useNavigate();
   const { pathname } = useLocation();
   const { user, setUser, setIsAuthenticated, isLoading } = useUserContext();
-
+ let [over, setOver] = useState(false);
   const { mutate: signOut } = useSignOutAccount();
 
   const handleSignOut = async (
@@ -85,8 +86,14 @@ const LeftSidebar = () => {
       <Button
         variant="ghost"
         className="shad-button_ghost"
-        onClick={(e) => handleSignOut(e)}>
-        <img src="/assets/icons/logout.svg" alt="logout"  className="group-hover:invert-white "/>
+        onClick={(e) => handleSignOut(e)}
+        onMouseOver={() => setOver(true)}
+        onMouseOut={() => setOver(false)}>
+        <img
+          src="/assets/icons/logout.svg"
+          alt="logout"
+          className={`group-hover:invert-white ${over ? "invert-white" : ""}`}
+        />
         <p className="small-medium lg:base-medium">Logout</p>
       </Button>
     </nav>
