@@ -80,6 +80,7 @@ const LeftSidebar = () => {
               </li>
             );
           })}
+          
         </ul>
       </div>
 
