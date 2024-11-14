@@ -4,12 +4,13 @@ import { Link, useNavigate } from "react-router-dom";
 import { Button } from "../ui/button";
 import { useUserContext } from "@/context/AuthContext";
 import { useSignOutAccount } from "@/lib/react-query/queries";
+import { useState } from "react";
 
 const Topbar = () => {
   const navigate = useNavigate();
   const { user } = useUserContext();
   const { mutate: signOut, isSuccess } = useSignOutAccount();
-
+  let [over, setOver] = useState(false);
   useEffect(() => {
     if (isSuccess) navigate(0);
   }, [isSuccess]);
@@ -29,9 +30,13 @@ const Topbar = () => {
         <div className="flex gap-4">
           <Button
             variant="ghost"
-            className="shad-button_ghost"
+             className="shad-button_ghost"
+        onClick={(e) => handleSignOut(e)}
+            onMouseOver={() => setOver(true)}
+            onMouseOut={() => setOver(false)}
+            // className="group:hover .group-hover\:invert-white shad-button_ghost"
             onClick={() => signOut()}>
-            <img src="/assets/icons/logout.svg" alt="logout" />
+            <img src="/assets/icons/logout.svg" alt="logout" className={`group-hover:invert-white ${over ? "invert-white" : ""}`} />
           </Button>
           <Link to={`/profile/${user.id}`} className="flex-center gap-3">
             <img
