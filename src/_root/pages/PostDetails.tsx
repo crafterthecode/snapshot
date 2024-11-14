@@ -35,7 +35,7 @@ const PostDetails = () => {
 
   return (
     <div className="post_details-container ">
-      <div className="hidden md:flex max-w-5xl w-full">
+      <div className=" max-w-5xl w-full">
       <Button
   onClick={() => navigate(-1)}
   onMouseOver={() => setOver(true)}
@@ -48,9 +48,9 @@ const PostDetails = () => {
     alt="back"
     width={24}
     height={24}
-    className={`group-hover:invert-white ${over ? "invert-white" : ""}`}
+    className={`group-hover:invert-white  ${over ? "invert-white" : ""}`}
   />
-  <p className="small-medium lg:base-medium">Back</p>
+  <p className="small-medium lg:base-medium">Back </p>
 </Button>
 
       </div>
