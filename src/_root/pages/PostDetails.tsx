@@ -35,7 +35,7 @@ const PostDetails = () => {
 
   return (
     <div className="post_details-container ">
-      <div className=" max-w-5xl w-full">
+      <div className="hidden md:flex max-w-5xl w-full">
       <Button
   onClick={() => navigate(-1)}
   onMouseOver={() => setOver(true)}
